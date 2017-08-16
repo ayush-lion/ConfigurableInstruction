@@ -1,19 +1,25 @@
 package com.app.panel;
 
-import java.awt.image.BufferedImage;
-import java.io.IOException;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Dimension;
 
-import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class InstructionPanel extends JPanel {
-
-	private String InstructionFrameImgPath = "D:/Official/WorkSpace/ConfigurableInstruction/src/main/resources/wodden-frame.jpg";
-	BufferedImage InstructionFrame = null;
-	
-	public InstructionPanel() throws IOException 
+public class InstructionPanel
+{
+	public Component Image() 
 	{
-		InstructionFrame = ImageIO.read(this.getClass().getResourceAsStream(InstructionFrameImgPath));
-		this.setLayout(null);
+		JPanel j=new JPanel();
+		j.setSize(50,50);
+		j.setBackground(Color.WHITE);
+		j.setLocation(950,300);
+		j.setPreferredSize(new Dimension(70,50));
+		
+		ImageIcon pic=new ImageIcon("");
+		j.add(new JLabel(pic));
+		return j;
 	}
 }
