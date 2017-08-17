@@ -18,7 +18,7 @@ public class InstructionPanel
 		j.setLocation(880,100);
 		j.setPreferredSize(new Dimension(70,50));
 		
-		ImageIcon pic=new ImageIcon("");
+		ImageIcon pic=new ImageIcon("C:\\Users\\dell\\Downloads\\images (1).jpg");
 		j.add(new JLabel(pic));
 		
 		return j;
