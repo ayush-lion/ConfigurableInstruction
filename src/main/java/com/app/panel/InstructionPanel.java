@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 
 public class InstructionPanel
 {
-	public Component Image() 
+	public Component Image1() 
 	{
 		JPanel j=new JPanel();
 		j.setSize(80,150);
@@ -24,7 +24,12 @@ public class InstructionPanel
 		return j;
 	}
 	
-	public Component Label() 
+	public Component Image2() 
+	{
+		return null;
+		
+	}
+	public Component Image3() 
 	{
 		JPanel panel=new JPanel();
 		panel.setSize(300,40);
