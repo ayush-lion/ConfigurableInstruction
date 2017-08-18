@@ -11,7 +11,7 @@ public class Provider {
 	String Provider_Image;
 	String[] Provider_Text;
 	String Provider_Shape;
-	String Provider_Max_Lines;
+	int Provider_Max_Lines;
 	
 	public Provider()
 	{
@@ -25,10 +25,7 @@ public class Provider {
 	public void setProvider_Image(String provider_Image) {
 		this.Provider_Image = provider_Image;
 	}
-	
-	public void setProvider_Max_Lines(String provider_Max_Lines) {
-		this.Provider_Max_Lines = provider_Max_Lines;
-	}
+
 	
 	public void setProvider_Shape(String provider_Shape) {
 		this.Provider_Shape = provider_Shape;
@@ -46,22 +43,19 @@ public class Provider {
 		return this.Provider_Image;
 	}
 	
-	public String getProvider_Max_Lines() {
-		return this.Provider_Max_Lines;
-		
+	public int getProvider_Max_Lines() {
+		return Provider_Max_Lines;
 	}
-	
+
+	public void setProvider_Max_Lines(int provider_Max_Lines) {
+		Provider_Max_Lines = provider_Max_Lines;
+	}
+
 	public String getProvider_Shape() {
 		return this.Provider_Shape;
 	}
 	
 	public String[] getProvider_Text() {
 		return this.Provider_Text;
-	}
-	
-
-	
-	
-	
-	
+	}	
 }
