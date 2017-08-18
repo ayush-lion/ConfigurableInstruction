@@ -60,7 +60,8 @@ public class PojoCreater {
 				pro.setProvider_Max_Lines(Student.length);
 				pro.setProvider_Shape("cloud");
 				}
-		}		
+		}	
+	
 	}
 	
 	public ArrayList<String> getaList() {
