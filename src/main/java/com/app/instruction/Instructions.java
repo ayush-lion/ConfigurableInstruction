@@ -33,9 +33,7 @@ public class Instructions {
 	
 	public void draw_instruction(Graphics g)
 	{
-		Graphics img = image.getGraphics();
-		img.drawString(ins_text, 10, 10);
-		img.dra
+		g.drawString(ins_text, posX, posY);
 		
 	}
 	
@@ -64,11 +62,6 @@ public class Instructions {
 	public void setIns_text(String ins_text) {
 		this.ins_text = ins_text;
 	}
-	
-	
-	
-	
-	
 	
 	
 
