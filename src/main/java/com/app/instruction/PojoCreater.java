@@ -3,65 +3,75 @@ package com.app.instruction;
 	import java.util.ArrayList;
 	import java.util.Iterator;
 	import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 	public class PojoCreater {
 
 		int counter;
-		ArrayList<String> aList;
+		ArrayList<String> aList = new ArrayList<String>();
+		ArrayList<Provider> list = new ArrayList<>();
 		
+		
+		public ArrayList<Provider> getList() {
+			return list;
+		}
+
+		public void setList(ArrayList<Provider> list) {
+			this.list = list;
+		}
+
 		List<String> Alloter = new ArrayList<String>();
 		
 		public PojoCreater() {
 			
-			aList=new ArrayList<String>();
-			aList.add("<Tutor_s>and end</Tutor_s>");
-			aList.add("<Tutor_t>and end</Tutor_t>");
-			aList.add("<STD_T>and end<STD_T>");
+			this.aList.add("<Tutor_t>and end</Tutor_t><Tutor_t>and end</Tutor_t>");
+			this.aList.add("<Tutor_t>and end</Tutor_t>");
+			this.aList.add("<STD_T>and end<STD_T>");
 		}
 		
 		public void create() 
 		{
-			ArrayList<Provider> list = new ArrayList<>();
-			Iterator iterator = aList.iterator();
+			ArrayList<Provider> lists = new ArrayList<Provider>();
 			
-			while (iterator.hasNext())
+			final Pattern pattern = Pattern.compile("<Tutor_t>(.+?)</Tutor_t>");
+				Pattern student_pattern = Pattern.compile("<STD_T>(.+?)</STD_T>");
+			Matcher matcher_tutor;
+			Matcher matcher_student;
+			for(int i=0; i<aList.size();i++)
 			{
-				int lines;
-				String[] teacher = null;
-				String[] Student = null;
-				Provider pro = new Provider();
-				String text=(String) iterator.next();
+				System.out.println(""+aList.get(i));
+				Provider provider = new Provider();
+			matcher_tutor = pattern.matcher(""+aList.get(i));
+			matcher_student = student_pattern.matcher(""+aList.get(i));
+			if(matcher_tutor.find())
+			{
+				System.out.println(""+matcher_tutor.group(1));
+				provider.setProvider_Allotee("TUTOR");
+				provider.setProvider_Text(matcher_tutor.group(1));
+				provider.setProvider_Shape("CLOUD");
 				
-				if(text.trim().equalsIgnoreCase("<Tutor_s>"+teacher+"</Tutor_s>"))
-					{
-					pro.setProvider_Allotee("tutor");
-					pro.setProvider_Max_Lines(teacher.length);
-					pro.setProvider_Text(teacher);
-					pro.setProvider_Shape("flat");
-					}
-				else if(text.trim().equalsIgnoreCase("<Tutor_t>"+teacher+"</Tutor_t>")) 
-					{
-					pro.setProvider_Allotee("tutor");
-					pro.setProvider_Max_Lines(teacher.length);
-					pro.setProvider_Text(teacher);
-					pro.setProvider_Shape("cloud");
-					}
-				else if(text.trim().equalsIgnoreCase("<STD_S>"+Student+"</STD_S>")) 
-					{
-					pro.setProvider_Allotee("Student");
-					pro.setProvider_Max_Lines(Student.length);
-					pro.setProvider_Text(Student);
-					pro.setProvider_Shape("flat");
-					}
-				else if(text.trim().equalsIgnoreCase("<STD_t>"+Student+"</STD_t>")) 
-					{
-					pro.setProvider_Allotee("Student");
-					pro.setProvider_Text(Student);
-					pro.setProvider_Max_Lines(Student.length);
-					pro.setProvider_Shape("cloud");
-					}
-			}	
-		}
+				
+			}
+			else
+			if(matcher_student.find())
+			{
+				System.out.println(""+matcher_student.group(1));
+
+				System.out.println(""+matcher_student.group(1));
+				provider.setProvider_Allotee("TUTOR");
+				provider.setProvider_Text(matcher_student.group(1));
+				provider.setProvider_Shape("CLOUD");
+			
+			}
+				lists.add(provider);
+			
+			}
+			
+			setList(lists);
+			
+		
+		}	
 		
 		public void show() 
 		{
@@ -77,7 +87,15 @@ package com.app.instruction;
 		
 		public static void main(String[] args) {
 			PojoCreater obj=new PojoCreater();
+			
 			obj.create();
+			
+			for(int i =0;i<obj.list.size();i++)
+			{
+				System.out.println(obj.list.get(i).Provider_Allotee+""+obj.list.get(i).Provider_Shape);	
+			}
+			
+			
 		}
 	}
 

@@ -6,10 +6,10 @@ public class Instruction_Controller {
 	
 	
 	Instruction_Performer performer ;
-	InstructionCallPanel panel;
+	InstructionPanel panel;
 	ArrayList<Provider> Instruction_Pojo = new ArrayList<Provider>();
 	
-	public Instruction_Controller(InstructionCallPanel panel, ArrayList<Provider> data)
+	public Instruction_Controller(InstructionPanel panel, ArrayList<Provider> data)
 	{
 		this.panel = panel;
 		this.Instruction_Pojo = data;
@@ -26,6 +26,29 @@ public class Instruction_Controller {
 		}
 		
 	}
+	
+	public void Draw_Actor_Tutor(Provider provider)
+	{
+		
+	}
+	
+	public void Draw_Actor_Student(Provider provider)
+	{
+		
+	}
+	
+	public void Instruct_Particular(Provider proivder)
+	{
+		
+	}
+	
+	public void Instruct_Particular_Index(int index)
+	{
+		
+	}
+	
+	
+	
 	
 	
 	

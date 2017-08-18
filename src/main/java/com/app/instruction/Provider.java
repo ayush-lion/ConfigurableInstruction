@@ -9,7 +9,7 @@ public class Provider {
 	
 	String Provider_Allotee;
 	String Provider_Image;
-	String[] Provider_Text;
+	String Provider_Text;
 	String Provider_Shape;
 	int Provider_Max_Lines;
 	
@@ -31,7 +31,7 @@ public class Provider {
 		this.Provider_Shape = provider_Shape;
 	}
 	
-	public void setProvider_Text(String[] provider_Text) {
+	public void setProvider_Text(String provider_Text) {
 		this.Provider_Text = provider_Text;
 	}
 	
@@ -55,7 +55,7 @@ public class Provider {
 		return this.Provider_Shape;
 	}
 	
-	public String[] getProvider_Text() {
+	public String getProvider_Text() {
 		return this.Provider_Text;
 	}	
 }
