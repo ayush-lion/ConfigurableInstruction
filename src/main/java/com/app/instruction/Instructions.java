@@ -1,5 +1,8 @@
 package com.app.instruction;
 
+import java.awt.Graphics;
+import java.awt.Image;
+
 public class Instructions {
 	
 	
@@ -7,6 +10,12 @@ public class Instructions {
 	
 	private String ins_text;
 	private String ins_shape;
+	private Image image;
+	private  int posX;
+	private int posY;
+	
+
+	
 	
 	public Instructions(String text, String shape) {
 		super();
@@ -21,6 +30,25 @@ public class Instructions {
 		
 	}
 	
+	
+	public void draw_instruction(Graphics g)
+	{
+		Graphics img = image.getGraphics();
+		img.drawString(ins_text, 10, 10);
+		img.dra
+		
+	}
+	
+	public Image getImage() {
+		return image;
+	}
+
+
+	public void setImage(Image image) {
+		this.image = image;
+	}
+
+
 	public String getIns_shape() {
 		return ins_shape;
 	}
