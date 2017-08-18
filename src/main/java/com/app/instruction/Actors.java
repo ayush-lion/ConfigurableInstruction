@@ -66,9 +66,10 @@ public class Actors {
 	public void setPath(Image path) {
 	this.actor_path = path;
 	}
-	
-	
+
 	public Actors()
-	{}
+	{
+		
+	}
 
 }
