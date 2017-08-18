@@ -63,12 +63,6 @@ public class PojoCreater {
 		}	
 		
 	}
-
-	public void check() 
-	{
-		
-	}
-	
 	public ArrayList<String> getaList() {
 		return aList;
 	}
