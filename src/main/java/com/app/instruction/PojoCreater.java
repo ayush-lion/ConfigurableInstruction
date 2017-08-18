@@ -61,6 +61,12 @@ public class PojoCreater {
 				pro.setProvider_Shape("cloud");
 				}
 		}	
+		
+	}
+
+	public void check() 
+	{
+		
 	}
 	
 	public ArrayList<String> getaList() {
