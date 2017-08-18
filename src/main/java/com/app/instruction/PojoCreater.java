@@ -60,15 +60,14 @@ public class PojoCreater {
 				pro.setProvider_Max_Lines(Student.length);
 				pro.setProvider_Shape("cloud");
 				}
-		}	
-		
-	}
-
-	public void check() 
-	{
-		
+		}		
 	}
 	
+	public void show() 
+	{
+		System.out.println("check");
+	}
+
 	public ArrayList<String> getaList() {
 		return aList;
 	}
