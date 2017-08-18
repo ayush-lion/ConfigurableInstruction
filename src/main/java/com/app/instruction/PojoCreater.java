@@ -21,7 +21,6 @@ public class PojoCreater {
 	
 	public void create() 
 	{
-		
 		ArrayList<Provider> list = new ArrayList<>();
 		Iterator iterator = aList.iterator();
 		
@@ -61,7 +60,6 @@ public class PojoCreater {
 				pro.setProvider_Max_Lines(Student.length);
 				pro.setProvider_Shape("cloud");
 				}
-			list.add(pro);
 		}	
 	}
 	
