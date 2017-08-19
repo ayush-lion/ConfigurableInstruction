@@ -14,8 +14,6 @@ public class Instructions {
 	private  int posX;
 	private int posY;
 	
-
-	
 	
 	public Instructions(String text, String shape) {
 		super();
@@ -26,8 +24,7 @@ public class Instructions {
 	
 	public Instructions()
 	{
-		//default constructor
-		
+		//default constructor	
 	}
 	
 	
